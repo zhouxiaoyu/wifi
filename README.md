@@ -1,14 +1,34 @@
 # dhcp_info
 
-一个基于获取android的flutter插件.
+A flutter plugin to get DHCP info.
 
 ## Getting Started
 
-//使用方法
+Pubspec #
+  
+  1 Add to pubspec
 
-import 'package:dhcp_info/dhcp_info.dart';
+  get_DHCP_info:
+    git:
+      url: https://github.com/zhouxiaoyu/wifi
 
- WifiIpInfo info = await DhcpInfo.getWifiIp;
- info 信息有：
+   2 get System permissions
+   
+      Android 
+   
+       <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> in AndroidMainifest
+         
+     3 run pub get 
+     
+     4 dart  import 'package:dhcp_info/dhcp_info.dart';
+     
+     5 Use
+        WifiIpInfo info = await DhcpInfo.getWifiIp;
+        
+        Example info.ip / info.netmask /  info.gateway  /  info.broadcastIP 
+     
+
+
+
  
- ip  netmask gateway broadcastIP 
+ 
