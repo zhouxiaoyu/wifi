@@ -1,7 +1,8 @@
 name: dhcp_info
-description: A new Flutter plugin.
+description: a dhcp plugin.
 version: 0.0.1
-homepage:
+homepage: https://github.com/zhouxiaoyu/wifi
+
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -29,8 +30,7 @@ flutter:
       android:
         package: com.example.dhcp_info
         pluginClass: DhcpInfoPlugin
-      ios:
-        pluginClass: DhcpInfoPlugin
+
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

@@ -14,7 +14,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
 
   @override
   void initState() {
@@ -31,10 +30,9 @@ class _MyAppState extends State<MyApp> {
     try {
       info = await DhcpInfo.getWifiIp;
       print("----------${info.gateway}---------------");
-      platformVersion =
-          await DhcpInfo.platformVersion ?? 'Unknown platform version';
+
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -42,9 +40,7 @@ class _MyAppState extends State<MyApp> {
     // setState to update our non-existent appearance.
     if (!mounted) return;
 
-    setState(() {
-      _platformVersion = platformVersion;
-    });
+
   }
 
   @override
@@ -55,7 +51,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Text('Running'),
         ),
       ),
     );
